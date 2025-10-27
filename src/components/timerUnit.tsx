@@ -4,7 +4,7 @@ import { memo } from 'react';
 
 type timer = {
     count: number;
-    buttonText: 'start' | 'pause' | 'resume';
+    buttonText: 'запустить' | 'пауза' | 'возобновить';
     handleState: () => void;
     reset: () => void;
     formattedTime: string;
@@ -20,7 +20,7 @@ export const TimerUnit = memo((props: timer) => {
                     {props.buttonText}
                 </Button>
             </Box>
-            <Button onClick={props.reset}>reset</Button>
+            <Button onClick={props.reset}>сбросить</Button>
         </Box>
     );
 });

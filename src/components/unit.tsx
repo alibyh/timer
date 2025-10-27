@@ -46,10 +46,10 @@ export default function Unit() {
             </Typography>
             <Box className='buttons'>
                 <Button variant='contained' onClick={changeState}>
-                    {timerState === 'idle' ? 'start' : timerState === 'running' ? 'pause' : 'resume'}
+                    {timerState === 'idle' ? 'запустить' : timerState === 'running' ? 'пауза' : 'возобновить'}
                 </Button>
             </Box>
-            <Button  onClick={reset}>reset</Button>
+            <Button  onClick={reset}>сбросить</Button>
         </Box>
     );
 }

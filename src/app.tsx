@@ -5,7 +5,7 @@ import { useState, useEffect, useMemo } from 'react';
 function App() {
     const [count, setCount] = useState(0);
     const [timerState, setTimerState] = useState<'running' | 'idle' | 'paused'>('idle');
-    const [txt, setTxt] = useState<'start' | 'pause' | 'resume'>('start');
+    const [txt, setTxt] = useState<'запустить' | 'пауза' | 'возобновить'>('запустить');
     const [isRun, setIsRun] = useState(false);
 
     useEffect(() => {
@@ -20,17 +20,17 @@ function App() {
         if (timerState === 'idle') {
             setTimerState('running');
             setIsRun(true);
-            setTxt('pause');
+            setTxt('пауза');
 
         } else if (timerState === 'running') {
             setTimerState('paused');
             setIsRun(false);
-            setTxt('resume');
+            setTxt('возобновить');
 
         } else if (timerState === 'paused') {
             setTimerState('running');
             setIsRun(true);
-            setTxt('pause');
+            setTxt('пауза');
 
         }
     };
@@ -46,7 +46,7 @@ function App() {
     const resetCount = () => {
         setCount(0);
         setIsRun(false);
-        setTxt('start');
+        setTxt('запустить');
         setTimerState('idle');
     };
 
